@@ -35,7 +35,7 @@ class TokenizerHandler:
     def encode_text_to_tokens(self, text):
         if self.model_provider == "OpenAI" and "gpt" in self.model_name.lower():
             return self.enc.encode(text)
-        elif self.model_provider == "OpenAI" in self.model_name.lower():
+        elif self.model_provider == "OpenAI":
             return self.enc.encode(text)
         elif self.model_provider == "zhipu":
             return self.enc.encode(text)
@@ -53,7 +53,7 @@ class TokenizerHandler:
             return self.enc.decode(tokens[:context_length])
         elif self.model_provider == "zhipu":
             return self.enc.decode(tokens[:context_length])
-        elif self.model_provider == "OpenAI" in self.model_name.lower():
+        elif self.model_provider == "OpenAI":
             return self.enc.decode(tokens[:context_length])
         elif self.model_provider == "Anthropic":
             # Assuming you have a different decoder for Anthropic
