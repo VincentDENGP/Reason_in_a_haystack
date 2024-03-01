@@ -1,6 +1,6 @@
 ## Reason in a haystack: understanding model’s behavior under long context reasoning
 <div align=center>
-<img src="imgs/arch.png" alt="drawing" width = 750/>
+<img src="imgs/arch.png" alt="drawing" width = 650/>
 </div>
 
 An extended version of Needle In a Haystack by [Greg Kamradt](https://github.com/gkamradt) to test the abilities that LLM conduct retrieve and reasoning at the same time. A more challenge and pratical task.
@@ -42,54 +42,134 @@ python run.py --config /path/to/config.yaml
 
 ## Preliminary results
 
-
 <div align=center>
 
 ### GPT4-128K ([gpt-4-turbo-preview](https://platform.openai.com/docs/models))
 
 
+<table>
+  <tr>
+    <td>
+      <img src="imgs/test128k_current_needle_35gpt-4-turbo-preview_1000_128000_24-02-28_.png" alt="drawing" width = 750/>
+    </td>
+    <td>
+      <img src="imgs/test128k_35gpt-4-turbo-preview_1000_128000_24-02-28_.png" alt="drawing" width = 750/>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p align="center">Retrieval</p>
+    </td>
+    <td>
+      <p align="center">Retrieval + Calculation</p>
+    </td>
+  </tr>
+</table>
 
 
-**Retrieval**
 
-<img src="imgs/test128k_current_needle_35gpt-4-turbo-preview_1000_128000_24-02-28_.png" alt="drawing" width = 750/>
-
-**Retrieval + Calculation**
-
-<img src="imgs/test128k_35gpt-4-turbo-preview_1000_128000_24-02-28_.png" alt="drawing" width = 750/>
+<!-- **Retrieval**
 
 
-**Accuracy**
 
-<img src="imgs/gpt4-128k.png" alt="drawing" width = 750/>
+**Retrieval + Calculation** -->
+
+
+
+
+
 
 
 ### GPT4-32K ([gpt-4-turbo-preview](https://platform.openai.com/docs/models))
 
-**Retrieval**
+<table>
+  <tr>
+    <td>
+      <img src="imgs/current_needle_gpt-4-turbo-preview_1000_32000.png" alt="drawing" width = 750/>
+    </td>
+    <td>
+      <img src="imgs/gpt-4-turbo-preview_1000_32000.png" alt="drawing" width = 750/>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p align="center">Retrieval</p>
+    </td>
+    <td>
+      <p align="center">Retrieval + Calculation</p>
+    </td>
+  </tr>
+</table>
 
-<img src="imgs/current_needle_gpt-4-turbo-preview_1000_32000.png" alt="drawing" width = 750/>
 
-**Retrieval + Calculation**
+<!-- **Retrieval**
 
-<img src="imgs/gpt-4-turbo-preview_1000_32000.png" alt="drawing" width = 750/>
+
+
+**Retrieval + Calculation** -->
+
+
 
 
 
 ### [NousResearch-Nous-Hermes-2-Mixtral-8x7B-DPO-32K](https://huggingface.co/NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO)
 
-**Retrieval**
 
-<img src="imgs/current_needles_Mixtral-8x7B-DPO_1000_32000.png" alt="drawing" width = 750/>
+<table>
+  <tr>
+    <td>
+      <img src="imgs/current_needles_Mixtral-8x7B-DPO_1000_32000.png" alt="drawing" width = 750/>
+    </td>
+    <td>
+      <img src="imgs/Mixtral-8x7B-DPO_1000_32000.png" alt="drawing" width = 750/>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p align="center">Retrieval</p>
+    </td>
+    <td>
+      <p align="center">Retrieval + Calculation</p>
+    </td>
+  </tr>
+</table>
 
-**Retrieval + Calculation**
-
-<img src="imgs/Mixtral-8x7B-DPO_1000_32000.png" alt="drawing" width = 750/>
+<!-- **Retrieval**
 
 
-**Accuracy**
 
-<img src="imgs/NousResearch-Nous-Hermes-2-Mixtral-8x7B-DPO-32K.png" alt="drawing" width = 750/>
+**Retrieval + Calculation** -->
+### Accuracy breakdown on retrieval; math and retrieval with calculation
+
+<table>
+  <tr>
+    <td>
+      <img src="imgs/gpt4-128k.png" alt="drawing" width = 750/>
+    </td>
+    <td>
+      <img src="imgs/NousResearch-Nous-Hermes-2-Mixtral-8x7B-DPO-32K.png" alt="drawing" width = 750/>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p align="center">Accuracy breakdown of GPT4</p>
+    </td>
+    <td>
+      <p align="center">Accuracy breakdown of Mistral 8*7B</p>
+    </td>
+  </tr>
+</table>
+
+
+
+
+<!-- **Accuracy**
+
+
+
+**Accuracy** -->
+
+
 </div>
 
 ## Acknowledgement
